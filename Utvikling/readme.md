@@ -3,21 +3,20 @@
 ## Lenker:
 - [Hefte](https://indd.adobe.com/view/38062418-9d87-4b6e-b4fb-c907cd10f942)
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
-- [Tips til hvordan snakke med ChatGP](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2017%20-%20%C3%85%20snakke%20med%20chatGPT)
-- [Deployment til Azure](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2014%20-%20Azure%20Deployment)
+- [Tips til hvordan snakke med ChatGP](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2017%20-%20%C3%85%20snakke%20med%20chatGPT)
+- [Deployment til Azure](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2014%20-%20Azure%20Deployment)
 
 
 
 ## Leksjoner
-- [Grunnlegende koding](https://github.com/boggarp/Utvikling/tree/main/Grunnlegende%20Koding)
-- [HTML og CSS](https://github.com/boggarp/Utvikling/tree/main/HTML%20og%20CSS/)
-- [Javascript på klienten](https://github.com/boggarp/Utvikling/tree/main/Javascript%20p%C3%A5%20klienten)
-- [Web-Applikasjoner - Klient og Server](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server)
+- [Grunnlegende koding](https://github.com/Kireobat/Info/tree/main/Utvikling/Grunnlegende%20Koding)
+- [HTML og CSS](https://github.com/Kireobat/Info/tree/main/Utvikling/HTML%20og%20CSS)
+- [Javascript på klienten](https://github.com/Kireobat/Info/tree/main/Utvikling/Javascript%20p%C3%A5%20klienten)
+- [Web-Applikasjoner - Klient og Server](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server)
 
 # CheatSheet
 - [npm](#npm)
-- [Express](#express)
-- [Handlebars](#handlebars)
+- [yarn](#yarn)
 - [better-sqlite3](#better-sqlite3)
 - [Express-session](#express-session)
 - [bcrypt](#bcrypt)
@@ -28,6 +27,8 @@
 
 
 ## npm
+
+npm forklaring
 
 ``` 
 //Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
@@ -46,40 +47,25 @@ nodemon app.js -e js,hbs
 npm install 
 ```
 
-## Express
+## yarn
 
+yarn forklaring
 
-### Handler som repsonderer med rendret hbs fil    
-```
-app.get('/about', (request, response) => {
-     response.render(about.hbs", {data: ["A","B"])
-})
-```
+``` 
+//Opprette nødvendige konfigurasjonsfiler ved oppstart nytt prosjekt  
+yarn init 
 
-### HTML-form input
-```
-app.post('/insertPerson (request,response) => {
-    console.log(request.body)
-})
-```
-### Query String input, /insert?id=2&name=Hans
-```
-app.get('/insert (request,response) => {
-    console.log(request.query.id)
-    console.log(request.query.name)
-})
-```
+//Installere Express, Handlebars og better-sqlite3 
+yarn install express, hbs, better-sqlite3
 
-## Handlebars
-### Skrive ut en variabel med navnet title
-```
-{{title}}
-```
-### Skrive ut alle elementer i tabellen data, der elementene er objekter med objektvariabel name
-```
-{{#each data}}
-    <p>{{this.name}} </p>
-{{/each}}
+//Installere nodemon globalt
+yarn install nodemon -g  
+
+//Autorestarter app.js ved filendringer på filtypen js og hbs
+nodemon app.js -e js,hbs 
+
+//Installerer alle pakkene som hører til et prosjekt
+yarn
 ```
 
 ## better-sqlite3
@@ -193,7 +179,7 @@ if(result.ok) {
         console.log("Result NOT OK")
     }
 ```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2016%20-%20S%C3%B8k%20Funksjonalitet)
+[Mer detaljer](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2016%20-%20S%C3%B8k%20Funksjonalitet)
 
 
 
@@ -208,7 +194,7 @@ if(result.ok) {
     console.log("Result NOT OK")
 }
 ```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2013%20-%20Post%20med%20Fetch)
+[Mer detaljer](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2013%20-%20Post%20med%20Fetch)
 
 
 ### Motta data fra server
@@ -218,5 +204,6 @@ async function updateData() {
   let response  = await fetch("/getData") //Åpner adressen /getData og henter resultatet
   let data  = await response.json() //Konverterer fra json til objekt/array
   console.log(data)
+}
 ```
-[Mer detaljer](https://github.com/boggarp/Utvikling/tree/main/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2008%20-%20Client%20Side%20Rendering)
+[Mer detaljer](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2008%20-%20Client%20Side%20Rendering)
