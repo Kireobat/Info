@@ -1,6 +1,7 @@
 ## Generell Info
 Kjør følgende kommando for å få alle pakkene-du trenger:
-npm install
+
+`npm install`
 
 
 # Vitse-system med søk
