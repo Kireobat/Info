@@ -40,7 +40,7 @@ Ulemper:
 
 ### Hvor mange forskjellige VLAN kan et moderne nettverk ha?
 
-Et moderne nettverk kan ha ulikt antall VLAN, avhengig av faktorer som størrelsen på nettverket, infrastrukturen og kapasiteten. VLAN ID-er brukes til å identifisere VLAN-er, og det teoretiske maksimale antallet VLAN-er i et nettverk er 4094. 
+Et moderne nettverk kan ha ulikt antall VLAN, avhengig av faktorer som størrelsen på nettverket, infrastrukturen og kapasiteten. VLAN ID-er brukes til å identifisere VLAN-er, og det teoretiske maksimale antallet VLAN-er i et nettverk er 4096. 
 
 I praksis vil imidlertid antall VLAN-er som kan støttes, avhenge av flere faktorer, inkludert tilgjengelig båndbredde og prosesseringskapasitet på nettverksutstyret. De fleste bedrifter og organisasjoner vil ha et begrenset antall VLAN-er, vanligvis fra noen få til noen titalls, avhengig av nettverkets størrelse og kompleksitet.
 
