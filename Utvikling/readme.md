@@ -1,10 +1,11 @@
-# ITK Utvikling
+# IT Utvikling
 
 ## Lenker:
 - [Hefte](https://indd.adobe.com/view/38062418-9d87-4b6e-b4fb-c907cd10f942)
 - [Utganspunkt Express Applikasjon](https://github.com/boggarp/Express-Handlebars---Utganspunkt-v2)
 - [Tips til hvordan snakke med ChatGP](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2017%20-%20%C3%85%20snakke%20med%20chatGPT)
 - [Deployment til Azure](https://github.com/Kireobat/Info/tree/main/Utvikling/Handlebars%20%26%20Express/Web-Applikasjoner%20-%20Klient%20og%20Server/Leksjon%2014%20-%20Azure%20Deployment)
+- [Alt om Svelte/Sveltekit](https://github.com/Kireobat/Info/tree/main/Utvikling/Svelte)
 
 
 
@@ -19,12 +20,14 @@
 - [yarn](#yarn)
 - [better-sqlite3](#better-sqlite3)
 - [Express-session](#express-session)
+- [Express Routes](#express-routes)
 - [bcrypt](#bcrypt)
 - [Javascript på klienten](#javascript-på-klienten)
 
 
 
 
+---
 
 ## npm
 
@@ -46,7 +49,7 @@ nodemon app.js -e js,hbs
 //Installerer alle pakkene som hører til et prosjekt
 npm install 
 ```
-
+---
 ## yarn
 
 yarn forklaring
@@ -67,7 +70,7 @@ nodemon app.js -e js,hbs
 //Installerer alle pakkene som hører til et prosjekt
 yarn
 ```
-
+---
 ## better-sqlite3
 
 ```
@@ -107,6 +110,7 @@ const info = sql.run("Spiderman",8)
     WHERE person_id=(?)
 
 ```
+---
 
 ## Express-session
 
@@ -124,8 +128,31 @@ request.session.username = username
 request.session.logedIn = true
 request.session.shoppingcart = []
 ```
+---
 
+## Express-Routes
 
+### DENNE LINJEN ER SUPER VIKTIG
+
+`app.use(express.urlencoded({extended: true}))`
+
+### post request kan ta inn data og bruke den i en funksjon
+
+```
+app.post("/api/login", (req, res) => {
+  login(req, res);
+});
+```
+
+### get requests henter bare data
+
+```
+app.get("/api/requests", (req, res) => {
+  getRequests(req, res);
+});
+```
+
+---
 ## bcrypt
 
 ### Lage hash av passordet "qwerty", saltrounds satt til 10
@@ -136,7 +163,7 @@ const hash = bcrypt.hashSync("qwerty", 10);
 ```
 const isCorrect = bcrypt.compareSync(password2, hash);
 ```
-
+---
 ## Javascript på klienten
 
 ### Endring av DOM, og koble kode til klikk

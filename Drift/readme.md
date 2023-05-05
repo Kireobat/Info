@@ -2,6 +2,8 @@
 
 ## Lenker:
 
+- [Cisco Switch Kommandoer](https://github.com/Kireobat/ciscoCommands)
+
 ## Nyttige forklaringer:
 
 - [VLAN](https://github.com/Kireobat/Info/tree/main/Drift/Forklaringer/VLAN)
